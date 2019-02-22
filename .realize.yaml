@@ -1,0 +1,19 @@
+schema:
+- name: go-websocket-echo
+  path: .
+  commands:
+    build:
+      status: true
+    run:
+      status: true
+      method: ./go-websocket-echo
+  args:
+  - server
+  watcher:
+    paths:
+    - /
+    extensions:
+    - go
+    ignored_paths:
+    - .git
+    - .realize.yaml
